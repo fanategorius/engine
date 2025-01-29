@@ -40,7 +40,7 @@
     <!-- * scope Java temp directory and Java Preference subsystem files into project's build directory -->
     <!-- * use custom Java logging configuration -->
     <!-- Do not override this property, use gwt.jvmArgs instead! -->
-    <gwt-plugin.extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=4 -Djava.io.tmpdir="${project.build.directory}/tmp" -Djava.util.prefs.systemRoot="${project.build.directory}/tmp" -Djava.util.prefs.userRoot="${project.build.directory}/tmp" -Djava.util.logging.config.class=org.ovirt.engine.ui.gwtaop.JavaLoggingConfig ${gwt.jvmArgs}</gwt-plugin.extraJvmArgs>
+    <gwt-plugin.extraJvmArgs>-Dgwt.jjs.permutationWorkerFactory=com.google.gwt.dev.ThreadedPermutationWorkerFactory -Dgwt.jjs.maxThreads=2 -Djava.io.tmpdir="${project.build.directory}/tmp" -Djava.util.prefs.systemRoot="${project.build.directory}/tmp" -Djava.util.prefs.userRoot="${project.build.directory}/tmp" -Djava.util.logging.config.class=org.ovirt.engine.ui.gwtaop.JavaLoggingConfig ${gwt.jvmArgs}</gwt-plugin.extraJvmArgs>
     <!-- Control target browsers for GWT compilation, maps to 'user.agent' deferred binding property in *.gwt.xml -->
     <!-- By default, compile for Firefox browser only, use 'all-user-agents' profile to compile for all browsers -->
     <gwt.userAgent>gecko1_8</gwt.userAgent>
