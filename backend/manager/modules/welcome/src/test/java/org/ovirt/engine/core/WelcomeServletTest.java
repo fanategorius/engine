@@ -3,23 +3,20 @@ package org.ovirt.engine.core;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Spy;
@@ -31,7 +28,7 @@ import org.ovirt.engine.core.common.interfaces.BackendLocal;
 import org.ovirt.engine.core.common.queries.QueryReturnValue;
 import org.ovirt.engine.core.common.queries.QueryType;
 import org.ovirt.engine.core.utils.MockConfigExtension;
-import org.ovirt.engine.core.utils.servlet.LocaleFilter;
+
 
 @ExtendWith({MockitoExtension.class, MockConfigExtension.class})
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -77,7 +74,7 @@ public class WelcomeServletTest {
         when(mockBrandingManager.getWelcomeSections(any())).thenReturn("Welcome Section HTML");
     }
 
-     private List<String> createLocaleKeys() {
+    private List<String> createLocaleKeys() {
         List<String> keys = new ArrayList<>();
         keys.add("en_US");
         keys.add("ru");
